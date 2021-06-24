@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Ride</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ionsicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Swal fire -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo/logo.jpg" alt="" width="150" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="icon">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="https://www.babcock.edu.ng/" class="nav-link"> Visit Babcok</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item btn btn-danger" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>      
+
+
+
+    <!-- Driver dashboard -->
+    <div class="main">
+        <div class="main-sidebar">
+            <div class="imgcont">
+                <div class="img"></div>
+            </div>
+            <br>
+            <h4 class="name">Daniel Hustle</h4>
+            <small>0804567889</small>
+            <br>
+            <br>
+            <button class="btn btn-primary newevent">
+                New Event
+                <span class="badge badge-info newevent-not">2</span>
+            </button>
+        </div>
+
+        <div class="main-area">
+            <h5>Drivers Dashboard</h5> 
+            <p>Welcome <b>John Doe</b> </p>
+            <div class="actions d-flex">
+                <button class="btn btn-primary m-2 edit-btn"><span class="icon"><ion-icon name="pencil-outline"></ion-icon></span> Edit Profile</button>
+
+                <button class="btn btn-danger m-2 logout-btn"><span class="icon"><ion-icon name="lock-open-outline"></ion-icon></span> Logout</button>
+            </div> 
+            <hr>
+
+            <div class="cards-cont">
+                <div class="box acep">
+                    <h5>Accepted Trips</h5>
+                    <div class="stat">
+                        <div class="icon acep">
+                            <ion-icon name="analytics-outline"></ion-icon>
+                        </div>
+                        <div class="counts">
+                            <p>123</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box rej">
+                    <h5>Canceled Trips</h5>
+                    <div class="stat">
+                        <div class="icon acep">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </div>
+                        <div class="counts">
+                            <p>13</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="ongoing-trip">
+                <p>Ongoing Trip</p>
+                <div class="boxes">
+                    <div class="ongoing-card">
+                        <div class="img-cont">
+                            <img src="../img/profiles/admin/ben.PNG" alt="">
+                        </div>
+                        <div class="info">
+                            <p>John Doe</p>
+                            <small class="time">5: 50pm</small>
+                        </div>
+                        <div class="action text-center d-flex">
+                                 <span class="icon call"><ion-icon name="call-outline"></ion-icon></span>
+
+                                <span class="icon cancel">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </span>
+                        </div>
+                    </div>
+                    <div class="ongoing-card">
+                        <div class="img-cont">
+                            <img src="../img/profiles/admin/ben.PNG" alt="">
+                        </div>
+                        <div class="info">
+                            <p>John Doe</p>
+                            <small class="time">5: 50pm</small>
+                        </div>
+                        <div class="action text-center d-flex">
+                                 <span class="icon call"><ion-icon name="call-outline"></ion-icon></span>
+
+                                <span class="icon cancel">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="new-event">
+                <div class="box">
+                    <div class="img-cont">
+                        <img src="../img/profiles/user/ben.PNG" alt="">
+                    </div>
+                    <div class="info mt-2">
+                        <h4>John Doe</h4>
+                        <a href="https://08034209681">08034209681</a>
+                        <br>
+                        <span class="icon">
+                            <ion-icon name="analytics-outline"></ion-icon>
+                        </span>
+                        <br>
+                        <small>From: </small>
+                        <span class="from">Babcok</span>
+                        <small>To: </small>
+                        <span class="to">Ikeja Lagos</span>
+                        <br>
+                        <br>
+                        <button class="btn btn-success btn-block accept">ACCEPT</button>
+                        <button class="btn btn-danger btn-block rejbtn">REJECT</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+    </div>
+
+    <div class="edit-profile">
+        <div class="cont">
+            <h5>Edit Your Profile</h5>
+            <div class="d-flex">
+                <div class="img-cont-edit">
+                    <img src="../img/profiles/admin/ben.PNG" alt="" class="user-img">
+                    <button class="edit-btn btn btn-secondary">
+                        <ion-icon name="pencil-outline"></ion-icon>edit
+                    </button>
+                </div>
+                <div class="others-cont">
+                    <form action="" class="form-group">
+                        <input type="text" class="form-control m-1 flname" placeholder="Full Name">
+    
+                        <input type="text" class="form-control m-1 pnumber" placeholder="Phone Number">
+    
+                        <input type="email" class="form-control m-1 pnumber" placeholder="Email Address">
+    
+                        <input type="password" class="form-control m-1 pnumber" placeholder="New password">
+    
+                        <div class="d-flex mt-2">
+                            <button class="btn btn-primary m-1">Save Changes</button>
+    
+                            <button class="btn btn-danger m-1 cancel-edit-btn">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,415 @@
+body{
+    overflow: hidden;
+}
+
+.navbar{
+    z-index: 1000;
+}
+
+.main{
+    width:100%;
+    height:auto;
+    padding:0px;
+    position: relative;
+    display: flex;
+}
+
+.main-sidebar{
+    height:100vh;
+    width:200px;
+    box-shadow: 0px 0px 3px #ccc;
+    padding:12px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.main-sidebar .img{
+    width:120px;
+    height:120px;
+    background:url("../../img/profiles/admin/ben.PNG");
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.main-sidebar .newevent{
+    position:relative;
+}
+.main-sidebar .newevent .newevent-not{
+    position:absolute;
+    top:-4px;
+    padding:5px;
+}
+.main-area{
+    height:100vh;
+    width:100%;
+    box-shadow: 0px 0px 3px #ccc;
+    padding:12px;
+    background: #fff;
+    overflow-y: scroll;
+}
+
+.main-area .cards-cont{
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+.main-area .cards-cont .box{
+    box-shadow: 0px 0px 3px #ccc;
+    padding:12px;
+    margin:10px;
+    border-radius: 10px;
+    width:260px;
+}
+.main-area .cards-cont .box .stat{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    color:#fff;
+}
+.main-area .cards-cont .box .stat .icon{
+    font-size: 35px;
+    padding-right:5px;
+}
+.main-area .cards-cont .box.acep{
+    background-image: linear-gradient(to bottom left, blue, cyan);
+}
+.main-area .cards-cont .box.rej{
+    background-image: linear-gradient(to bottom left, #ff0000, #df3c3c5b);
+}
+
+.main-area .cards-cont .box .stat .counts{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+
+.main-area .ongoing-trip{
+    position: relative;
+}
+.main-area .ongoing-trip .boxes{
+    display:flex;
+    flex-wrap: wrap;
+}
+.main-area .ongoing-card{
+    width:150px;
+    padding:10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px #ccc;
+    text-align: center;
+    margin:5px;
+}
+.main-area .ongoing-card img{
+    width:80px;
+    border-radius: 50%;
+}
+.main-area .ongoing-card .icon{
+    border-radius: 50%;
+    text-align: center;
+    width:30px;
+    height:30px;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    margin:12px;
+    cursor: pointer;
+}
+.main-area .ongoing-card .icon.call:hover{
+    background: #295a09f3;
+}
+.main-area .ongoing-card .icon.cancel:hover{
+    background: #5a0909f3;
+}
+
+.main-area .ongoing-card .icon.call:focus,
+.main-area .ongoing-card .icon.cancel:focus
+{
+    border: 2px solid #000;
+}
+.main-area .ongoing-card .action{
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.main-area .ongoing-card .icon.call{
+    background: green;
+}
+.main-area .ongoing-card .icon.cancel{
+    background: #ee0909;
+}
+
+.new-event{
+    position:fixed;
+    top:0px;
+    left:0px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height:100vh;
+    z-index: 2000;
+    display:none;
+}
+.new-event.active{
+    display:flex;
+}
+.new-event .box{
+    width:300px;
+    padding:12px;
+    background:#fff;
+    overflow:hidden;
+    border-radius: 10px;
+    text-align: center;
+}
+.new-event .box .icon{
+    font-size: 55px;
+    color:#000;
+}
+.new-event .box img{
+    width: 50%;
+    border-radius: 50%;
+    margin-top:20px;
+}
+.new-event .box .btn{
+    border-radius: 30px;
+}
+
+.new-event .from,
+.new-event .to{
+    font-weight:500;
+    color:#000;
+}
+
+
+/* edit-profile container */
+.edit-profile{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0, 0, 0, 0.9);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    display:none;
+}
+.edit-profile.hide{
+    display:none;
+}
+.edit-profile.show{
+    display:flex;
+}
+.edit-profile .cont{
+    padding:10px 12px;
+    background:#fff;
+    color:#000;
+    border-radius: 4px;
+    position:relative;
+}
+
+.edit-profile .cont .img-cont-edit img{
+    width:50%;
+    border-radius: 50%;
+}   
+.edit-profile .cont .img-cont-edit .edit-btn{
+    position:absolute;
+    bottom:80px;
+    left:30px;
+    font-size:12px;
+}
+
+
+
+
+
+/* Users Page */
+.user-cont{
+    width:100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    position:relative;
+    top:10px;
+}
+.user-cont .main{
+    padding:10px 15px;
+    background:#fff;
+    box-shadow: 0px 0px 5px #ccc;
+    width:400px;
+    overflow:hidden;
+    border-radius: 5px;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.user-cont .main .img-cont{
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.user-cont .main .img-cont img{
+    width:50%;
+    border-radius: 50%;
+    margin:12px;
+}
+.user-cont .main .img-cont .btn{
+    padding:5px 10px;
+    font-size:12px;
+}
+.user-cont .main .user-attempt .btn{
+ border-radius: 30px;
+ font-size: 12px;
+}
+
+
+
+/* Rides cont */
+
+.rides-cont{
+    width:100%;
+    height:100vh;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0, 0, 0, 0.9);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+.rides-cont.active{
+    display:flex;
+}
+
+/* Join ride cont */
+
+.rides-cont .join-ride{
+    width:350px;
+    height:450px;
+    padding:12px;
+    background:#fff;
+    border-radius: 5px;
+    position: relative;
+    text-align:center;
+    position:relative;
+    background: #fff;
+    border-radius:5px;
+    text-align:center;
+}
+
+.rides-cont .join-ride.active{
+    display:flex;
+}
+
+.rides-cont .join-ride .steps{
+    display:none;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+    top:30px;
+}
+
+.rides-cont .join-ride .steps.form-area{
+    margin:0px auto;
+    padding:12px;
+}
+
+.rides-cont .join-ride .steps.form-area .btn{
+    width:100%;
+}
+
+
+.rides-cont .join-ride .steps.active{
+    display: block;
+}
+.rides-cont .steps .alert-cont .alert{
+    width:250px;
+    margin:0px auto;
+    padding:4px;
+}
+.rides-cont .steps .alert-cont .icon{
+    font-size:20px;
+    color:green;
+}
+.rides-cont  .steps .pair-cont {
+    text-align:center;
+}
+.rides-cont .steps .pair-cont  img{
+    width:50%;
+    border-radius: 50%;
+}
+
+
+/* Book a ride */
+.rides-cont .book-ride{
+    width:350px;
+    height:450px;
+    padding:12px;
+    background:#fff;
+    border-radius: 5px;
+    position: relative;
+    text-align:center;
+    position:relative;
+    background: #fff;
+    border-radius:5px;
+    text-align:center;
+}
+.rides-cont .book-ride .steps{
+    display:none;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height: 100%;
+    top:30px;
+}
+.rides-cont .book-ride .steps.active{
+    display:block;
+}
+.rides-cont .book-ride .steps.form-area{
+    margin:0px auto;
+    padding:12px;
+}
+.rides-cont .book-ride .steps.form-area .btn{
+    width:100%;
+}
+
+
+.rides-cont .book-ride .steps.active{
+    display: block;
+}
+.rides-cont .steps .alert-cont .alert{
+    width:250px;
+    margin:0px auto;
+    padding:4px;
+}
+.rides-cont .steps .alert-cont .icon{
+    font-size:20px;
+    color:green;
+}
+.rides-cont  .steps .pair-cont {
+    text-align:center;
+}
+.rides-cont .steps .pair-cont  img{
+    width:50%;
+    border-radius: 50%;
+}

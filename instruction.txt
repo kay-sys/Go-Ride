@@ -1,0 +1,25 @@
+================== Go-Ride App ==================
+
+This is just the frontend of this application created using
+
+- HTML
+- CSS 
+- BOOTSTRAP
+- JAVASCRIPT
+
+Extract the folder from the zip file. All you need to do is open the index.html file which would be the default home page for this project.
+
+This project consist of the following files:
+
+- index.html / HomePage
+- login.html / User Login page
+- signup.html / User signup page
+- driver_login.html / Driver login page
+- driver_signup.html / Driver signup page
+
+ ------ Accessing The Drivers Dashboard Page  -------------
+
+ By default, the drivers dashboard is hidden from the web app. It can only be assessed from the URL.
+ All you need to do is move to your browser search tab, and type "dashboard/" i.e if your inside the folder of this projects (http://127.0.0.1:5500/dashboard/), this would be redirect to the dashboard of the driver.
+
+ 
