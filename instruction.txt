@@ -22,4 +22,5 @@ This project consist of the following files:
  By default, the drivers dashboard is hidden from the web app. It can only be assessed from the URL.
  All you need to do is move to your browser search tab, and type "dashboard/" i.e if your inside the folder of this projects (http://127.0.0.1:5500/dashboard/), this would be redirect to the dashboard of the driver.
 
+test
  
